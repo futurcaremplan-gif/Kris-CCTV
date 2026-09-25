@@ -23,8 +23,13 @@ jobs:
         run: |
           sdkmanager "platform-tools" "platforms;android-35" "build-tools;35.0.0"
 
-            - name: Enable AndroidX
-        run: echo "android.useAndroidX=true" > kris-cctv/gradle.properties
+      - name: Extract CCTV project
+        run: unzip -q Kris-CCTV-RTSP-v2.zip
+
+      - name: Enable AndroidX
+        run: |
+          echo "android.useAndroidX=true" > kris-cctv/gradle.properties
+          echo "android.enableJetifier=true" >> kris-cctv/gradle.properties
 
       - name: Install Gradle
         uses: gradle/actions/setup-gradle@v4
