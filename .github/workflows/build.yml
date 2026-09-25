@@ -24,7 +24,7 @@ jobs:
           sdkmanager "platform-tools" "platforms;android-35" "build-tools;35.0.0"
 
       - name: Extract CCTV project
-        run: unzip -q Kris-CCTV-RTSP-v2.zip
+        run: unzip -q Kris-CCTV-RTSP-v3-FIXED.zip
 
       - name: Enable AndroidX
         run: |
