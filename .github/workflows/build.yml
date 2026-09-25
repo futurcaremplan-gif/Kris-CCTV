@@ -24,7 +24,7 @@ jobs:
           sdkmanager "platform-tools" "platforms;android-35" "build-tools;35.0.0"
 
       - name: Extract CCTV project
-        run: unzip -q Kris-CCTV-RTSP-v3-FIXED.zip
+        run: unzip -q Kris-CCTV-RTSP-v4-UDP-FIX.zip
 
       - name: Enable AndroidX
         run: |
@@ -43,5 +43,5 @@ jobs:
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: Kris-CCTV-debug-apk
+          name: Kris-CCTV-v2-apk
           path: kris-cctv/app/build/outputs/apk/debug/app-debug.apk
